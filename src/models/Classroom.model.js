@@ -1,7 +1,7 @@
-import { Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const classroomSchema = Schema({
-  name: { type: String, required: true },
+  name: { type: String, required: true, unique: true },
   startTime: { type: String, required: true },
   endTime: { type: String, required: true },
   daysOfWeek: [
